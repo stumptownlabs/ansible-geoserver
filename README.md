@@ -1,6 +1,6 @@
 # ansible-geoserver
 
-An Ansible role for installing Geoserver 2.7 server on Ubuntu via apt.
+An Ansible role for installing Geoserver 2.7.0 on Ubuntu via apt.
 
 ## Role Variables
 
