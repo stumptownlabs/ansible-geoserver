@@ -1,0 +1,29 @@
+---
+# tasks file for stumptownlabs.geoserver
+
+- name: Assert platform is supported
+  tags: geoserver
+  assert:
+    that:
+      - ansible_os_family in ['Ubuntu', 'Debian']
+
+
+- name: Download Geoserver (remote)
+  tags: geoserver
+  get_url:
+    dest={{ ansible_data_path }}/{{ geoserver_redis_filename }}
+    url={{ geoserver_mirror }}/{{ geoserver_version }}/{{ geoserver_redis_filename }}
+    owner=0
+    group=0
+    mode=0644
+    sha256sum={{ geoserver_redis_sha256sum }}
+
+
+- name: Unzip Geoserver
+  tags: geoserver
+  command: chdir={{ ansible_data_path }} /usr/bin/unzip {{ geoserver_redis_filename }}  geoserver.war
+
+
+- name: Deploy Geoserver
+  tags: geoserver
+  command: mv {{ ansible_data_path }}/geoserver.war /var/lib/tomcat7/webapps/geoserver.war
