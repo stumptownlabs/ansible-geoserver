@@ -1,2 +1,5 @@
 ---
 # defaults file for stumptownlabs.geoserver
+
+# path for ansible to store downloaded or templated data
+ansible_data_path: '/home/vagrant'

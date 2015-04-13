@@ -21,3 +21,4 @@ geoserver_version: "{{ geoserver_version_major }}.{{ geoserver_version_minor }}.
 
 # filename of Geoserver redistributable package
 geoserver_redis_filename: "geoserver-{{ geoserver_version }}-war.zip"
+
