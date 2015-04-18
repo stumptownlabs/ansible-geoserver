@@ -26,4 +26,4 @@
 
 - name: Deploy Geoserver
   tags: geoserver
-  command: mv {{ ansible_data_path }}/geoserver.war /var/lib/tomcat7/webapps/geoserver.war
+  command: mv {{ ansible_data_path }}/geoserver.war {{ tomcat_webapps_path }}/geoserver.war

@@ -1,24 +1,3 @@
 ---
 # vars file for stumptownlabs.geoserver
 
-# Geoserver major version number
-geoserver_version_major: '2'
-
-# Geoserver minor version number
-geoserver_version_minor: '7'
-
-# Geoserver patch version number
-geoserver_version_patch: '0'
-
-# Mirror where to dowload Geoserver redistributable package from
-geoserver_mirror: "http://sourceforge.net/projects/geoserver/files/GeoServer"
-
-# SHA256 sum for the Geoserver redistributable package
-geoserver_redis_sha256sum: '9d5c52e1137c6393cee17679b88eee2d728842a7449da004cecb805da8fc8f1a'
-
-# concatenated Geoserver version
-geoserver_version: "{{ geoserver_version_major }}.{{ geoserver_version_minor }}.{{ geoserver_version_patch }}"
-
-# filename of Geoserver redistributable package
-geoserver_redis_filename: "geoserver-{{ geoserver_version }}-war.zip"
-
